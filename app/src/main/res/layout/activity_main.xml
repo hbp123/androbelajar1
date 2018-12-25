@@ -1,48 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:weightSum="1">
-        <EditText
-            android:id="@+id/edt_judul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.9"
-            android:hint="Masukkan Nama Film"
-            android:inputType="text"
-            android:maxLines="1"
-            android:layout_marginLeft="25sp"/>
-
-        <ImageView
-            android:id="@+id/tmblcari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:layout_weight="0.1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lvFilm"
-            tools:listitem="@layout/item_movies"
-            android:padding="20dp"/>
-    </LinearLayout>
-
-</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?><android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"    xmlns:tools="http://schemas.android.com/tools"    android:id="@+id/drawer_layout"    android:layout_width="match_parent"    android:layout_height="match_parent"    android:fitsSystemWindows="true"    tools:openDrawer="start">    <include        layout="@layout/app_bar_main"        android:layout_width="match_parent"        android:layout_height="match_parent" />    <android.support.design.widget.NavigationView        android:id="@+id/nav_view"        android:layout_width="wrap_content"        android:layout_height="match_parent"        android:layout_gravity="start"        android:fitsSystemWindows="true"        app:headerLayout="@layout/nav_header_main"        app:menu="@menu/activity_main_drawer" /></android.support.v4.widget.DrawerLayout>
